@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  SERVER_URL: 'http://3.133.59.28:8081/',
+
+  API : {
+    login: 'login',
+    getWorkOrderList: 'user/getWorkOrderList',
+    getWorkOrderDetails: 'user/getWorkOderDetails',
+    getUserServiceTasks: 'user/getServiceTasks'
+  }
 };
 
 /*

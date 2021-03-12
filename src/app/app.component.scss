@@ -1,0 +1,39 @@
+.example-container {
+  position: absolute;
+  top: 60px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+mat-sidenav{
+  background-color: #1976d2;
+  a{
+    width: 100%;
+    display: block;
+    font-weight: 600;
+    color: white;
+  }
+  .wo-details{
+    text-align: center;
+  }
+}
+span{
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+p{
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+img{
+  width: 1.4rem;
+  margin: 0.2rem;
+  cursor: pointer;
+}
+
+.logoutButton{
+  color: white;
+}

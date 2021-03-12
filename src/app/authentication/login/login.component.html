@@ -1,0 +1,30 @@
+<div class="h-100 justify-content-center d-flex">
+  <form
+    #loginForm="ngForm"
+    (ngSubmit)="submitForm(loginForm)"
+    class="form-horizontal m-t-20"
+  >
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Login Form</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+
+        <mat-form-field >
+          <mat-label>Enter Username</mat-label>
+          <input matInput name="email" [(ngModel)] = "loginObj.email" required>
+        </mat-form-field>
+        <mat-form-field >
+          <mat-label>Enter password</mat-label>
+          <input matInput name="password" [(ngModel)] = "loginObj.password" [type]="hide ? 'password' : 'text'" required>
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-footer>
+        <button type="submit" [disabled] = "loginForm.invalid" mat-raised-button>Login</button>
+      </mat-card-footer>
+    </mat-card>
+  </form>
+</div>

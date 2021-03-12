@@ -1,0 +1,60 @@
+<h2>Work Order Details</h2>
+<div class="container row">
+  <div class="col-lg-12">
+    <p class="requestTitle">{{ workOrderDetails?.requestTitle }}</p>
+    <p>{{ workOrderDetails?.dueDate | date }}</p>
+  </div>
+</div>
+<table class="table table-bordered w-100">
+  <tr>
+    <th>WO No</th>
+    <th colspan="2">WO Type</th>
+    <th>Maintainence Type</th>
+  </tr>
+  <tr>
+    <td>WO #{{ workOrderDetails?.workOrderId }}</td>
+    <td colspan="2">{{ workOrderDetails?.workType }}</td>
+    <td>{{ workOrderDetails?.maintenanceTypeName }}</td>
+  </tr>
+  <tr>
+    <th>Priority</th>
+    <th>Due Date</th>
+    <th>Due Time</th>
+    <th>Customer</th>
+
+  </tr>
+  <tr>
+    <td>{{ workOrderDetails?.priority }}</td>
+    <td>{{ workOrderDetails?.dueDate | date }}</td>
+    <td>{{ workOrderDetails?.dueTime | date:'h:mm a' }}</td>
+    <td>{{ workOrderDetails?.customerName | titlecase }}</td>
+  </tr>
+  <tr>
+    <th>Asset</th>
+    <th colspan="2">Service Address</th>
+    <th>Customer Signature</th>
+  </tr>
+  <tr>
+    <td>{{ workOrderDetails?.assetName }}</td>
+    <td colspan="2">{{ workOrderDetails?.serviceAddress }}</td>
+    <td>{{ workOrderDetails?.signature }}</td>
+  </tr>
+</table>
+<div class="container row">
+  <div class="col-lg-12">
+    <p class="requestTitle">Service Tasks</p>
+  </div>
+</div>
+<table class="table table-bordered w-100">
+  <tr>
+    <th>Service Task</th>
+    <th colspan="2">Service Task Type</th>
+    <th>Work Type</th>
+  </tr>
+  <tr>
+    <td>{{ serviceTaskLists?.taskName }}</td>
+    <td colspan="2">{{ serviceTaskLists?.serviceTypeName }}</td>
+    <td>{{ serviceTaskLists?.workType }}</td>
+  </tr>
+
+</table>
